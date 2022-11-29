@@ -8,4 +8,6 @@ This project is a [frontendmentor.io](https://www.frontendmentor.io/challenges/m
 - Tailwind CSS
 - JavaScript
 
+[Live Demo](https://i-maged.github.io/Manage-landing-page/)
+
 ![Preview](/img/screen.png?raw=true)
