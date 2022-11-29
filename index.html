@@ -206,10 +206,10 @@
         <h2 class="text-center text-4xl font-bold">What they've said</h2>
 
         <!-- Testimonials Container -->
-        <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
+        <div class="hidden md:flex flex-col mt-24 md:flex-row md:space-x-6">
           <!-- 1st testimonial -->
           <div
-            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-100 md:w-1/3"
           >
             <img src="./img/avatar-anisha.png" class="w-16 -mt-14" />
             <h5 class="text-lg font-bold">Anisha Li</h5>
@@ -222,7 +222,7 @@
           <!-- end of 1st testimonial -->
           <!-- 2nd testimonial -->
           <div
-            class="hidden md:flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-100 md:w-1/3"
           >
             <img src="./img/avatar-ali.png" class="w-16 -mt-14" />
             <h5 class="text-lg font-bold">Ali Bravo</h5>
@@ -235,7 +235,7 @@
           <!-- end of 2nd testimonial -->
           <!-- 3rd testimonial -->
           <div
-            class="hidden md:flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-100 md:w-1/3"
           >
             <img src="./img/avatar-richard.png" class="w-16 -mt-14" />
             <h5 class="text-lg font-bold">Richard Watts</h5>
@@ -245,9 +245,97 @@
               I talk to!”
             </p>
           </div>
-          <!-- end of 3rd testimonial -->
         </div>
-        <!-- button  -->
+        <!-- end of 3rd testimonial -->
+        <!-- Carousel -->
+        <div class="flex flex-col mt-24 md:hidden">
+          <div class="relative">
+            <ul id="slider">
+              <!-- 1st testimonial -->
+              <li
+                class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-100 md:w-1/3 relative"
+              >
+                <img src="./img/avatar-anisha.png" class="w-16 -mt-14" />
+                <h5 class="text-lg font-bold">Anisha Li</h5>
+                <p class="text-sm px-16 text-darkGrayishBlue">
+                  “Manage has supercharged our team's workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </li>
+              <!-- 2nd testimonial -->
+              <li
+                class="hidden flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-100 md:w-1/3 relative"
+              >
+                <img src="./img/avatar-ali.png" class="w-16 -mt-14" />
+                <h5 class="text-lg font-bold">Ali Bravo</h5>
+                <p class="text-sm px-16 text-darkGrayishBlue">
+                  “We have been able to cancel so many other subscriptions since
+                  using Manage. There is no more cross-channel confusion and
+                  everyone is much more focused.”
+                </p>
+              </li>
+              <!-- 3rd testimonial -->
+              <li
+                class="hidden flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-100 md:w-1/3 relative"
+              >
+                <img src="./img/avatar-richard.png" class="w-16 -mt-14" />
+                <h5 class="text-lg font-bold">Richard Watts</h5>
+                <p class="text-sm px-16 text-darkGrayishBlue">
+                  “Manage allows us to provide structure and process. It keeps
+                  us organized and focused. I can't stop recommending them to
+                  everyone I talk to!”
+                </p>
+              </li>
+            </ul>
+            <!-- carousel buttons container -->
+            <div class="absolute px-5 flex h-full w-full top-0 left-0">
+              <div class="my-auto w-full flex justify-between">
+                <!-- left button -->
+                <button
+                  onclick="prev()"
+                  class="bg-white p-3 rounded-full bg-opacity-80 shadow-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+                    />
+                  </svg>
+                </button>
+                <!-- right button -->
+                <button
+                  onclick="next()"
+                  class="bg-white p-3 rounded-full bg-opacity-80 shadow-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- testimonial section button  -->
         <div class="my-16">
           <a
             href="#"
@@ -309,7 +397,7 @@
           </div>
         </div>
         <!-- list container -->
-        <div class="flex justify-around space-x-32">
+        <div class="flex justify-around space-x-6">
           <div class="flex flex-col space-y-3 text-white">
             <a href="#" class="hover:text-brightRed">Home</a>
             <a href="#" class="hover:text-brightRed">Pricing</a>

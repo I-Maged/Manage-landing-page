@@ -14,3 +14,33 @@ btn.addEventListener('click', () => {
   nav.classList.toggle('flex');
   nav.classList.toggle('hidden');
 });
+
+// Carousel
+const sliderElement = document.getElementById('slider');
+const slides = document.getElementById('slider').getElementsByTagName('li');
+const totalSlides = sliderElement.childElementCount;
+
+let currentSlideID = 1;
+
+function next() {
+  if (currentSlideID < totalSlides) {
+    currentSlideID++;
+    showSlide();
+  }
+}
+function prev() {
+  if (currentSlideID > 1) {
+    currentSlideID--;
+    showSlide();
+  }
+}
+function showSlide() {
+  for (let i = 0; i < totalSlides; i++) {
+    const el = slides[i];
+    if (currentSlideID === i + 1) {
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
+    }
+  }
+}
